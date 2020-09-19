@@ -52,7 +52,7 @@ public class HillClimbing {
                     }
                 }
             }
-            if(min < currentFactor){
+            if(min <= currentFactor){
                 temp = temp.chilNodes.get(index_min);
                 movs++;
                 

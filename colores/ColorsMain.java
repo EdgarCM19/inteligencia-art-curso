@@ -24,10 +24,14 @@ public class ColorsMain {
         int column = 0;//rnd.nextInt(4);
         HillClimbing hill = new HillClimbing(root.matrix, row, column);
         MatrixNode solution = hill.findSolution();
+        Simulado simulado = new Simulado(matrix, row, column, 3);
+        MatrixNode solutionSim = simulado.findSolution();
         System.out.println("Matriz inicial con r: " + row + " y c: " + column);
         Utils.printMatrix(root.matrix);
-        System.out.println("Maatriz final con " + hill.movs + " movimientos");
+        System.out.println("Maatriz final hill con " + hill.movs + " movimientos");
         Utils.printMatrix(solution.matrix);
+        System.out.println("Maatriz final simulado con " + simulado.movs + " movimientos");
+        Utils.printMatrix(solutionSim.matrix);
     }
 
     private static void test1(char [][] mat){
